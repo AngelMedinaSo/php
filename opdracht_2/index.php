@@ -1,5 +1,5 @@
 <?php
-$ingelogd = false;
+$ingelogd = true;
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $ingelogd = false;
     <h1>HOI!!!</h1>
     <p>
         <?php
-        if ($ingelogd) {
+        if ($ingelogd === true) {
             echo "Welkom terug!";
         } else {
             echo "Log eerst in.";
