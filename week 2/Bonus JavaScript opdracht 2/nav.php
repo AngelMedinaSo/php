@@ -6,4 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <nav></nav>
+    <nav>
+        <button>Mode</button>
+    </nav>
