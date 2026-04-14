@@ -1,7 +1,6 @@
 <?php
 
 require "includes/db.php";
-// Mijn mini-app wordt een: series die je kijkt tracker
 $appNaam = "Seriesly";
 $trackerType = "seriesTracker";
 $tagline = "Track ur favorite series and shows";
@@ -31,15 +30,16 @@ $items = $item->fetchAll(PDO::FETCH_ASSOC);
         echo "<p>Er zijn nog geen items toegevoegd.</p>";
     } else {
         echo "<ul>";
-
         foreach ($items as $item) {
             echo "<li>" . $item['titel'] . "</li>";
         }
-
         echo "</ul>";
     }
 
+    include "pages/toevoegen.php";
+
     ?>
+    
 
 </body>
 
