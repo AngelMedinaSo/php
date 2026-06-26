@@ -1,37 +1,13 @@
-LOGIN FLOW - Wat gebeurt er stap voor stap?
-============================================
+LOGIN FLOW
 
-Stap 1: Gebruiker vult het formulier in
-  De gebruiker typt zijn username en wachtwoord
-  in een HTML formulier en klikt op "Inloggen".
+Step 1: User fills in the form (username + password) and clicks login.
+Step 2: The form sends the data via POST to login.php.
+Step 3: PHP looks up the username in the database.
+Step 4: PHP checks the password with password_verify().
+Step 5: Correct password = redirect to homepage. Wrong password = show error.
 
-Stap 2: Formulier wordt verstuurd naar de server
-  De gegevens worden via POST verstuurd naar login.php.
-  Het wachtwoord is niet zichtbaar in de URL.
+Where is the password checked?
+On the server, in PHP. The user never sees this code.
 
-Stap 3: PHP zoekt de gebruiker op in de database
-  PHP pakt de username uit $_POST en zoekt in de
-  database of er een gebruiker bestaat met die username.
-
-Stap 4: Wachtwoord wordt gecontroleerd
-  Het wachtwoord uit het formulier wordt vergeleken
-  met de hash in de database via password_verify().
-  Als het klopt geeft die functie true terug.
-
-Stap 5: Inloggen gelukt of mislukt
-  - Klopt het wachtwoord? Dan wordt de gebruiker
-    ingelogd en doorgestuurd naar een andere pagina.
-  - Klopt het niet? Dan ziet de gebruiker een foutmelding.
-
-============================================
-DENKNAVRAGEN
-============================================
-
-Waar wordt het wachtwoord gecontroleerd?
-  Op de server, in PHP. De gebruiker ziet deze code niet.
-
-Waarom is dit server-side logica?
-  Als je het wachtwoord in de browser (JavaScript)
-  zou controleren, kan iemand die code gewoon
-  bekijken en omzeilen. Op de server is de code
-  verborgen en veilig.
+Why not in the browser (JavaScript)?
+Anyone can view and bypass JavaScript. Server code is hidden and safe.
