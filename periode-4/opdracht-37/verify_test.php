@@ -26,21 +26,6 @@ if (password_verify($test2, $hash)) {
     echo "Test 2 - Onjuist wachtwoord";
 }
 
-/*
-----------------------------------------------
-    DENKNAVRAGEN
-----------------------------------------------
-
-Waarom kun je een wachtwoord niet gewoon vergelijken met ==?
-    De hash ziet er elke keer anders uit door de salt.
-    "geheim123" == "$2y$10$abc..." is altijd false,
-    ook als het wachtwoord klopt.
-    password_verify() weet hoe de hash is opgebouwd
-    en kan het correct controleren.
-
-Wat gebeurt er als je een verkeerd wachtwoord test?
-    password_verify() geeft false terug.
-    De gebruiker krijgt "Onjuist wachtwoord" te zien.
-----------------------------------------------
-*/
+// You can't use == because the hash looks different every time.
+// password_verify() knows how to correctly compare the password with the hash.
 ?>
