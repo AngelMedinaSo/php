@@ -13,7 +13,7 @@
 
         <?php if (isset($_SESSION['user'])): ?>
             <a href="#">Nieuw item</a> |
-            <a href="#">Logout</a>
+            <a href="logout.php">Logout</a>
         <?php else: ?>
             <a href="#">Login</a> |
             <a href="#">Register</a>
