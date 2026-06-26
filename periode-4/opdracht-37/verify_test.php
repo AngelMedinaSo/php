@@ -6,7 +6,6 @@ $hash       = password_hash($wachtwoord, PASSWORD_DEFAULT);
 echo "Hash: " . $hash;
 echo "<br><br>";
 
-// Test 1: correct wachtwoord
 $test1 = "geheim123";
 
 if (password_verify($test1, $hash)) {
@@ -17,7 +16,6 @@ if (password_verify($test1, $hash)) {
 
 echo "<br>";
 
-// Test 2: fout wachtwoord
 $test2 = "verkeerd456";
 
 if (password_verify($test2, $hash)) {
