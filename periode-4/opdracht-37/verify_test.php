@@ -24,6 +24,4 @@ if (password_verify($test2, $hash)) {
     echo "Test 2 - Onjuist wachtwoord";
 }
 
-// You can't use == because the hash looks different every time.
-// password_verify() knows how to correctly compare the password with the hash.
 ?>

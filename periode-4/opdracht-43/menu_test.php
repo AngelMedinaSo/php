@@ -32,7 +32,3 @@
 </body>
 </html>
 
-<?php
-// A logged in user needs different options than a guest.
-// A guest should only see Login and Register, not pages that require a login.
-?>

@@ -31,7 +31,3 @@
 </body>
 </html>
 
-<?php
-// Hiding a button is not enough for security. Someone can still go to the URL manually.
-// You also need to check on the page itself if the user is logged in.
-?>
