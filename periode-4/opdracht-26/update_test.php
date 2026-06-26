@@ -13,13 +13,10 @@ try {
     exit;
 }
 
-// Testdata
 $titel = "Nieuwe titel";
 $id    = 1;
 
 $sql  = "UPDATE items SET titel = ? WHERE ID = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$titel, $id]);
-
-echo "Record bijgewerkt! ID " . $id . " heeft nu de titel: " . $titel;
 ?>
