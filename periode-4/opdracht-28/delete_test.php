@@ -13,12 +13,9 @@ try {
     exit;
 }
 
-// Testdata
-$id = 3;
+$id = 1;
 
 $sql  = "DELETE FROM items WHERE ID = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$id]);
-
-echo "Item verwijderd! ID " . $id . " is niet meer aanwezig in de database.";
 ?>
