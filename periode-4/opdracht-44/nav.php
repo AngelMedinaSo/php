@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['user'] = "Angelino"; // comment this line to test logged out
+// $_SESSION['user'] = "Angelino"; // uncomment to test logged in
+unset($_SESSION['user']); // comment this line to test logged in
 ?>
 
 <!DOCTYPE html>
