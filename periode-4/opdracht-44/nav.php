@@ -32,20 +32,6 @@
 </html>
 
 <?php
-/*
-----------------------------------------------
-    DENKNAVRAGEN
-----------------------------------------------
-
-Waarom mag een niet-ingelogde gebruiker geen "Nieuw item" zien?
-    Omdat die pagina alleen voor ingelogde gebruikers
-    is bedoeld. Je verbergt de knop zodat het duidelijk
-    is wat de gebruiker kan doen.
-
-Is alleen het verbergen van een knop genoeg voor veiligheid?
-    Nee. Iemand kan gewoon handmatig naar de URL gaan.
-    Je moet op de pagina zelf ook controleren of
-    iemand ingelogd is, en anders terugsturen.
-----------------------------------------------
-*/
+// Hiding a button is not enough for security. Someone can still go to the URL manually.
+// You also need to check on the page itself if the user is logged in.
 ?>

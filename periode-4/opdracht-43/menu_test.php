@@ -33,20 +33,6 @@
 </html>
 
 <?php
-/*
-----------------------------------------------
-    DENKNAVRAGEN
-----------------------------------------------
-
-Waarom zou je menu-items aanpassen op basis van login?
-    Een ingelogde gebruiker heeft andere opties nodig
-    dan iemand die nog niet ingelogd is.
-    Je toont alleen wat relevant is voor die persoon.
-
-Wat moet een gebruiker zien als hij niet is ingelogd?
-    Links naar de inlogpagina en registratiepagina.
-    Geen links naar paginas die een login vereisen,
-    zoals "Mijn profiel".
-----------------------------------------------
-*/
+// A logged in user needs different options than a guest.
+// A guest should only see Login and Register, not pages that require a login.
 ?>
