@@ -14,10 +14,6 @@
 
     <h1>Correct query</h1>
     <p>UPDATE items SET titel = 'Test' WHERE ID = 1</p>
-    <p>Now only the record with ID 1 is updated.</p>
-
-    <h1>Why is it dangerous?</h1>
-    <p>Without WHERE you overwrite all data at once. There is no warning and it cannot be undone without a backup.</p>
 
 </body>
 </html>
