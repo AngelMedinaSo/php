@@ -1,7 +1,6 @@
 <?php
 session_start();
-// $_SESSION['user'] = "Angelino"; // uncomment to test logged in
-unset($_SESSION['user']); // comment this line to test logged in
+$_SESSION['user'] = "Angelino"; //u can just comment this line out to test the login/logout but u have to be in diff sessions, so u can just open a new incognito window to test the login/logout
 ?>
 
 <!DOCTYPE html>
