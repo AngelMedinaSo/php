@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+$_SESSION['user'] = "Angelino"; // comment this line to test logged out
+?>
 
 <!DOCTYPE html>
 <html lang="nl">
