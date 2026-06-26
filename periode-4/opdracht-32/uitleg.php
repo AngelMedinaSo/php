@@ -1,66 +1,23 @@
-<?php
+<?php ?>
 
-/*
-==============================================
-    OPDRACHT 32 - Fout in een UPDATE query
-==============================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht 32</title>
+</head>
+<body>
 
-De foutieve query:
+    <h1>Wrong query</h1>
+    <p>UPDATE items SET titel = 'Test'</p>
+    <p>The WHERE is missing. This updates ALL records in the table.</p>
 
-    UPDATE items SET titel = 'Test'
+    <h1>Correct query</h1>
+    <p>UPDATE items SET titel = 'Test' WHERE ID = 1</p>
+    <p>Now only the record with ID 1 is updated.</p>
 
-----------------------------------------------
-    Wat gaat hier mis?
-----------------------------------------------
+    <h1>Why is it dangerous?</h1>
+    <p>Without WHERE you overwrite all data at once. There is no warning and it cannot be undone without a backup.</p>
 
-Er ontbreekt een WHERE.
-
-Zonder WHERE weet de database niet welk record
-aangepast moet worden. Het resultaat is dat ALLE
-rijen in de tabel worden aangepast.
-
-Dus alle titels in de tabel worden 'Test'.
-
-----------------------------------------------
-    Waarom is dit gevaarlijk?
-----------------------------------------------
-
-Je overschrijft alle data in die kolom in een keer.
-Er is geen bevestiging of waarschuwing.
-Dit is moeilijk of niet terug te draaien zonder backup.
-
-----------------------------------------------
-    De correcte query:
-----------------------------------------------
-
-    UPDATE items SET titel = 'Test' WHERE ID = 1
-
-Met WHERE ID = 1 wordt alleen het record met ID 1
-aangepast. De rest blijft onveranderd.
-
-==============================================
-*/
-
-$servername = "localhost";
-$username   = "root";
-$password   = "";
-$dbname     = "items";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Verbinding mislukt: " . $e->getMessage();
-    exit;
-}
-
-// Correcte query met WHERE
-$id    = 1;
-$titel = "Test";
-
-$sql  = "UPDATE items SET titel = ? WHERE ID = ?";
-$stmt = $conn->prepare($sql);
-$stmt->execute([$titel, $id]);
-
-echo "Alleen ID " . $id . " is aangepast naar: " . $titel;
-?>
+</body>
+</html>
